@@ -1,0 +1,44 @@
+name: Automated scheduled health check 
+# push:
+#     branches:
+#       - main
+# Controls when the action will run.
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+    
+  push:
+    branches:
+      - main
+    
+permissions:
+    contents: write
+
+jobs:
+  health_check_job:
+    runs-on: ubuntu-latest
+    name: Check all sites
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Now use the fetched token in your shell script
+      - name: Run Shell Script
+        id: write_the_file
+        run: python3 worker.py
+        
+      - name: commit the files
+        run: |
+         git config --global user.email "abdisamk@gmail.com"
+         git config --global user.name "abdimk"
+         if ! git diff --exit-code; then
+              git add .
+              git commit -am "update the repository"
+              
+          fi
+         
+         
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
