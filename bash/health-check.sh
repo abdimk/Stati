@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-# DON'T TUCH OLD STUFF!
+# DON'T TOUCH OLD STUFF!
 # DON'T MESS WITH THIS !
-# my be i will use it in the future God know!
-
+# mybe i will use it in the future God know!
+#
 
 
 
