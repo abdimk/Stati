@@ -1,19 +1,23 @@
 <html>
   <head>
-
     <title>Status Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="icon" href="icons/search.png" type="image/x-icon">
+    <link rel="icon" href="icons/search.png" type="image/x-icon" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- <link rel="shortcut icon" href="/path/to/your/favicon.ico" type="image/x-icon"> -->
     <script src="JS/index.js"></script>
   </head>
   <body>
     <div class="pageContainer">
+      <!-- <nav class="web-nav">
+        <img src="icons/dark theme icon/moon.png" id="icon">
+      </nav> -->
+
       <div class="headline">
         <!-- <img src="statistical_logo.png" alt="Logo" width="400px" /> -->
         <span> System Status </span>
-        
       </div>
       <div id="reports" class="reportContainer"></div>
       <div id="tooltip" class="tooltip" style="opacity: 0">
@@ -41,16 +45,24 @@
           </div>
           <div class="statusSubtitle">
             <div class="sectionUrl"><a href="$url">$url</a></div>
-            <div class="statusUptime">$upTime in the last 30 days</div>
+            <div class="statusUptime">$upTime in the last 60 days</div>
           </div>
         </div>
       </div>
     </div>
     <footer>
+      <div class="contacts">
+
+        <div class="icon_section">
+        <a class="footer_mid_icons" href="https://github.com/abdimk/"><i class="fab fa-github footer_mid_icons_inner"></i></a>
+        <a class="footer_mid_icons" href="https://t.me/iamNetkas"><i class="fab fa-telegram footer_mid_icons_inner"></i></a>
+        <a class="footer_mid_icons" href="https://www.linkedin.com/in/abdisa-merga/"><i class="fab fa-linkedin footer_mid_icons_inner"></i></a>
+        <a class="footer_mid_icons" href="https://mastodon.ie/@abdisa"><i class="fab fa-mastodon footer_mid_icons_inner"></i></a>
+    </div>
+    </div>
       Powered by
       <a href="https://github.com/abdimk/Statistical"
-        >Website status mood: [Testing]</a
-      >.
+        >Github Actions [LiveMode]</a>.
     </footer>
   </body>
   <script>
