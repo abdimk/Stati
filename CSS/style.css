@@ -21,6 +21,27 @@ body {
   text-align: center;
   transition: opacity 0.3s;
 }
+
+.contacts{
+  font-size: 24px; /* Adjust the size as needed */
+  display: flex;
+  color: #181818;   
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_mid_icons{
+  padding-left: 5px;
+}
+
+.contacts a .footer_mid_icons_inner {
+    color: black;
+    padding: 10px 3px;
+    border-bottom: 5px;
+}
+footer a{
+  color: green;
+}
 h1,
 h2,
 h3,
