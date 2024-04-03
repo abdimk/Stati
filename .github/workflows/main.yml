@@ -5,7 +5,7 @@ name: Automated scheduled health check
 # Controls when the action will run.
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/1 * * * *'
     
   push:
     branches:
